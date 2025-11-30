@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Gold Ultra Premium Key Generator</title>
+
+<style>
+:root{
+  --gold1:#d6b15b;
+  --gold2:#f7e7b0;
+  --gold-glow:#d6b15b80;
+  --bg:#050507;
+}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* MAIN BACKGROUND */
+body{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#000;
+  overflow:hidden;
+  font-family:Poppins, sans-serif;
+  color:#fff;
+}
+
+/* -----------------------------------------------------
+     ULTIMATE BACKGROUND ENGINE (ALL EFFECTS)
+------------------------------------------------------*/
+.fx{
+  position:fixed;
+  pointer-events:none;
+  font-weight:900;
+  opacity:0.9;
+  animation: floatUp 7s linear infinite, spin3D 5s linear infinite;
+}
+
+/* COLORS */
+.green{ color:#00ff6a; filter:drop-shadow(0 0 14px #00ff6a); }
+.gold{ color:#f5d36c; filter:drop-shadow(0 0 14px #f5c65e); }
+.diamond{ color:#00eaff; filter:drop-shadow(0 0 18px #00eaff); }
+
+.rainbow{
+  background:linear-gradient(90deg,#ff0077,#ff8a00,#ffee00,#00ff44,#00eaff,#a44bff);
+  -webkit-background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 0 15px #ffffff);
+}
+
+/* Spark particles */
+.spark{
+  position:fixed;
+  width:6px;height:6px;
+  background:#fff;
+  border-radius:50%;
+  animation: sparkMove 5s linear infinite;
+  filter:drop-shadow(0 0 6px #fff);
+}
+
+/* FLOAT UP + WIND CURVE */
+@keyframes floatUp{
+  0%{
+    transform:translateY(110vh) translateX(0) scale(0.7) rotate(0deg);
+    opacity:1;
+  }
+  30%{
+    transform:translateY(70vh) translateX(30px) scale(1) rotate(120deg);
+  }
+  60%{
+    transform:translateY(30vh) translateX(-30px) scale(1.3) rotate(240deg);
+  }
+  100%{
+    transform:translateY(-10vh) translateX(15px) scale(1.6) rotate(360deg);
+    opacity:0;
+  }
+}
+
+/* 3D rotation */
+@keyframes spin3D{
+  0%{ transform:rotateX(0deg) rotateY(0deg); }
+  100%{ transform:rotateX(360deg) rotateY(360deg); }
+}
+
+@keyframes sparkMove{
+  0%{ transform:translateY(110vh) scale(0.6); opacity:1; }
+  100%{ transform:translateY(-10vh) scale(1.4); opacity:0; }
+}
+
+/* -----------------------------------------------------
+     MAIN CARD DESIGN (unchanged)
+------------------------------------------------------*/
+.card{
+  width:380px;
+  max-width:95vw;
+  background:linear-gradient(145deg,#1a1a1a,#0a0a0a);
+  padding:32px 28px;
+  border-radius:22px;
+  border:1px solid #6a5428;
+  box-shadow:0 0 20px #d6b15b33,inset 0 0 20px #d6b15b22;
+  text-align:center;
+  transition:transform 0.3s;
+}
+.card:hover{
+  transform:rotateX(6deg) rotateY(-6deg) scale(1.02);
+}
+
+/* Gold title */
+h1{
+  font-size:32px;
+  margin-bottom:18px;
+  background:linear-gradient(90deg,var(--gold1),var(--gold2));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* Progress bar */
+.progress-wrap{ position:relative; height:40px; margin:12px 0; }
+.track{
+  position:absolute;
+  left:12px; right:12px; top:18px;
+  height:8px;
+  background:#1b1b1b;
+  border-radius:10px;
+}
+.fill{
+  position:absolute;
+  left:12px; top:18px;
+  height:8px; width:0%;
+  background:linear-gradient(90deg,var(--gold1),var(--gold2),var(--gold1));
+  border-radius:10px;
+  box-shadow:0 0 14px var(--gold-glow);
+  transition:width 0.25s linear;
+}
+
+/* dots */
+.dot{
+  position:absolute;
+  top:10px;
+  width:20px;height:20px;
+  background:#444;
+  border-radius:50%;
+  border:4px solid #1d1d1d;
+  transform:translateX(-50%);
+  transition:0.3s;
+}
+.dot.active{
+  background:var(--gold1);
+  box-shadow:0 0 15px var(--gold-glow);
+  transform:translateX(-50%) scale(1.15);
+}
+
+/* Status text */
+.status{
+  margin-top:35px;
+  font-size:18px;
+  color:#bbb;
+  min-height:65px;
+}
+
+/* Key code */
+.code{
+  margin-top:22px;
+  font-size:22px;
+  font-weight:700;
+  letter-spacing:4px;
+  background:linear-gradient(90deg,var(--gold1),var(--gold2));
+  -webkit-background-clip:text;
+  color:transparent;
+  opacity:0;
+  transform:translateY(10px);
+  transition:0.4s;
+  position:relative;
+  display:inline-block;
+}
+.code.show{
+  opacity:1;
+  transform:translateY(0);
+}
+.code::after{
+  content:"";
+  position:absolute;
+  top:0;left:-100%;
+  width:80px;height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.65),transparent);
+  transform:skewX(-25deg);
+  animation: shineMove 2s infinite;
+}
+
+@keyframes shineMove{
+  0%{ left:-100%; }
+  100%{ left:120%; }
+}
+
+/* Button */
+.verify{
+  margin-top:20px;
+  padding:12px 20px;
+  background:linear-gradient(90deg,#b33,#e55);
+  border:none;
+  border-radius:10px;
+  color:#fff;
+  font-weight:700;
+  font-size:17px;
+  cursor:pointer;
+  opacity:0;
+  transform:translateY(10px);
+  transition:0.4s;
+}
+.verify.show{
+  opacity:1;
+  transform:translateY(0);
+}
+.small{margin-top:12px;font-size:14px;color:#777;}
+</style>
+</head>
+<body>
+
+<!-- MAIN CARD -->
+<div class="card">
+  <h1 id="title">CONNECTING</h1>
+
+  <div class="progress-wrap">
+    <div class="track"></div>
+    <div class="fill" id="fill"></div>
+
+    <div class="dot" id="dot1" style="left:12px"></div>
+    <div class="dot" id="dot2" style="left:50%"></div>
+    <div class="dot" id="dot3" style="left:calc(100% - 12px)"></div>
+  </div>
+
+  <div class="status">
+    <div id="s1">Connecting to server...</div>
+    <div id="s2" style="display:none">Connected</div>
+    <div id="s3" style="display:none">Generating Secure Key...</div>
+    <div id="s4" style="display:none">Key Generated Successfully</div>
+  </div>
+
+  <div class="code" id="code">XXXX-XXXX-XXXX-XXXX</div>
+
+  <button class="verify" id="verifyBtn">Human Verification</button>
+  <div class="small">We need to check you're not a robot.</div>
+</div>
+
+
+<!-- -----------------------------------------------------
+      ULTIMATE FX GENERATOR JS
+------------------------------------------------------ -->
+<script>
+const icons=[
+ "$","$","$","$",
+ "💎","💎",
+ "✦","✧","✶","✷",
+ "$","💰","$","💲",
+ "✪","❈"
+];
+
+/* 120 floating elements */
+for(let i=0;i<120;i++){
+  let e=document.createElement("div");
+  e.classList.add("fx");
+
+  let sym=icons[Math.floor(Math.random()*icons.length)];
+  e.textContent=sym;
+
+  if(sym==="$"||sym==="💰"||sym==="💲"){
+    if(Math.random()>0.5) e.classList.add("green");
+    else e.classList.add("gold");
+  }
+  else if(sym==="💎"){
+    e.classList.add("diamond");
+  }
+  else{
+    e.classList.add("rainbow");
+  }
+
+  e.style.left=Math.random()*100+"vw";
+  e.style.fontSize=(20+Math.random()*40)+"px";
+  e.style.animationDuration=(5+Math.random()*5)+"s";
+  e.style.animationDelay=(Math.random()*4)+"s";
+  e.style.zIndex=Math.random()>0.5?"3":"1";
+
+  document.body.appendChild(e);
+}
+
+/* spark particles */
+for(let i=0;i<60;i++){
+  let s=document.createElement("div");
+  s.className="spark";
+
+  s.style.left=Math.random()*100+"vw";
+  s.style.animationDuration=(3+Math.random()*4)+"s";
+  s.style.animationDelay=(Math.random()*3)+"s";
+  s.style.opacity=Math.random()*0.8+0.2;
+
+  document.body.appendChild(s);
+}
+
+
+/* -----------------------------------------------------
+      KEY GENERATOR LOGIC (unchanged)
+------------------------------------------------------ */
+const fill=document.getElementById("fill");
+const dot1=document.getElementById("dot1");
+const dot2=document.getElementById("dot2");
+const dot3=document.getElementById("dot3");
+
+const s1=document.getElementById("s1");
+const s2=document.getElementById("s2");
+const s3=document.getElementById("s3");
+const s4=document.getElementById("s4");
+
+const title=document.getElementById("title");
+const codeEl=document.getElementById("code");
+const verify=document.getElementById("verifyBtn");
+
+let keyInterval;
+
+function randomKey(){
+  const chars="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+  let out="";
+  for(let g=0;g<4;g++){
+    if(g) out+="-";
+    for(let i=0;i<4;i++){
+      out+=chars[Math.floor(Math.random()*chars.length)];
+    }
+  }
+  return out;
+}
+
+function animateFill(from,to,dur){
+  return new Promise(res=>{
+    const start=performance.now();
+    function frame(now){
+      const t=Math.min(1,(now-start)/dur);
+      fill.style.width=(from+(to-from)*t)+"%";
+      if(t<1) requestAnimationFrame(frame);
+      else res();
+    }
+    requestAnimationFrame(frame);
+  });
+}
+
+function wait(ms){ return new Promise(res=>setTimeout(res,ms)); }
+
+async function run(){
+  keyInterval=setInterval(()=>{ codeEl.textContent=randomKey(); },30);
+  codeEl.classList.add("show");
+
+  dot1.classList.add("active");
+  await animateFill(0,33,2000);
+  await wait(600);
+
+  s1.style.display="none";
+  s2.style.display="block";
+  title.textContent="GENERATING";
+  dot2.classList.add("active");
+
+  await animateFill(33,66,2200);
+  await wait(600);
+
+  s3.style.display="block";
+  await animateFill(66,100,1800);
+
+  s4.style.display="block";
+  title.textContent="COMPLETED";
+  dot3.classList.add("active");
+
+  clearInterval(keyInterval);
+  codeEl.textContent=randomKey();
+
+  await wait(400);
+  verify.classList.add("show");
+}
+
+verify.onclick=()=>window.location.href="https://hubverify.com/cl/?o=6925248a5a19d";
+
+run();
+</script>
+
+</body>
+</html>
